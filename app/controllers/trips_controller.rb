@@ -1,5 +1,8 @@
 class TripsController < ApplicationController
-  def indexnew
+  def index
+  end
+
+  def new
   end
 
   def create

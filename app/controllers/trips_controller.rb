@@ -19,4 +19,8 @@ class TripsController < ApplicationController
 
   def destroy
   end
+private
+  def trip_params
+    params.require(:trip).permit(:location, :starting_time, :ending_time, :experiences, user_ids: [])
+  end
 end

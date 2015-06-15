@@ -1,2 +1,22 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<%= form_for @user do |f| %>
+  <div>
+    <%= f.label :first %>
+    <%= f.text_field :first %>
+    <%= f.label :last %>
+    <%= f.text_field :last %>
+  </div>
+
+  <div>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+  <div>
+    <%= f.label :home %>
+    <%= f.text_field :home %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'back', user_path(@user)  %>

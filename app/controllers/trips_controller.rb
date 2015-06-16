@@ -4,7 +4,7 @@ class TripsController < ApplicationController
   end
 
   def new
-    @trips = Trip.new
+    @trip = Trip.new
   end
 
   def create
@@ -37,7 +37,7 @@ class TripsController < ApplicationController
     @trip.destroy
   end
 
-  
+
 private
   def trip_params
     params.require(:trip).permit(:location, :starting_time, :ending_time, :experiences, user_ids: [])

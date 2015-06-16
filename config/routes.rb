@@ -4,10 +4,10 @@ Rails.application.routes.draw do
   end
   # resources :trips
   root 'users#index'
-  get "/users/:user_id/trips/new" => "trips#new"
+  get '/users/:user_id/trips/new' => 'trips#new'
   # get 'trips/index' 
 
-  # get 'trips/create'
+  # get 'trips/new'
 
   # get 'trips/show'
 

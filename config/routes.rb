@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   resources :users do  
     resources :trips
   end
-  resources :trips
+  # resources :trips
   root 'users#index'
-  
+  get "/users/:user_id/trips/new" => "trips#new"
   # get 'trips/index' 
 
   # get 'trips/create'

@@ -1,6 +1,7 @@
 <h1><%= @user.first + '' + @user.last %>
 <h4>Email Address: <%= @user.email  %></h4>
 <h4>Location: <%= @user.home  %></h4>
-
+<br>
+<%= link_to "Create a New Itinerary", new_user_trip_path(@user, @trip) %>
 <br>  
 <%= link_to "Back", users_path  %>

@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   resources :users do  
     resources :trips
   end
+  get "/auth/:provider/callback" => "sessions#create"
+  get 'sessions/show'
+get 'auth/logout' => 'sessions#destroy'
   resources :trips
   root 'users#index'
   

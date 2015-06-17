@@ -7,8 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<%= params.inspect %>
+<br>
 john was here
 <%= yield %>
-<%= params.inspect %>
+
 </body>
 </html>

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root 'users#index'
   get '/users/:user_id/trips/new' => 'trips#new'
   # get 'trips/index' 
-
+resources :trips
   # get 'trips/new'
 
   # get 'trips/show'

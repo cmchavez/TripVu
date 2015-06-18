@@ -1,6 +1,7 @@
 <h1>New Itinerary</h1>
 <%= form_for @trip do |f| %>
 
+
 	<div>
 	    <%= f.label :location %>
 	    <%= f.text_field :location %>
@@ -9,6 +10,8 @@
 <br>
 <%= link_to '<button type="button">Back</button>'.html_safe, users_path %>
   	
-    	<%= f.submit "Next: Pick Your Dates" %>
+<%= f.submit "Next: Pick Your Dates" %>
   
 <% end %>
+
+

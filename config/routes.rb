@@ -1,38 +1,12 @@
 Rails.application.routes.draw do
   resources :users do  
     resources :trips
-  end
-
+  
+end
   root 'users#index'
-  get '/users/:user_id/trips/new' => 'trips#new'
-  
-  resources :trips
-  # get 'trips/index' 
-  
-  # get 'trips/new'
 
-  # get 'trips/show'
 
-  # get 'trips/edit'
-
-  # get 'trips/update'
-
-  # get 'trips/destroy'
-
-  # get 'users/index' => 'users#index'
-
-  # get 'users/new'
-
-  # get 'users/create'
-
-  # get 'users/show'
-
-  # get 'users/edit'
-
-  # get 'users/update'
-
-  # get 'users/destroy'
-
+resources :trips
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -49,7 +23,7 @@ Rails.application.routes.draw do
   #   resources :products
 
   # Example resource route with options:
-  #   resources :products do
+  #   resources :products dok
   #     member do
   #       get 'short'
   #       post 'toggle'

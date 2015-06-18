@@ -6,7 +6,7 @@ end
   root 'users#index'
 
 
-resources :trips
+  resources :trips
 
 
   # The priority is based upon order of creation: first created -> highest priority.

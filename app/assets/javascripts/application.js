@@ -13,5 +13,8 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
-//= require turbolinks
+//= require angular
+//= require daypilot-all.min
+//= require app
+//= require daypilot_controller
 //= require_tree .

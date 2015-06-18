@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="dayPilotApp">
 <head>
-  <title>TripVu</title>
+  <title>tripVu</title>
   
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 <%= params.inspect %>
+<div ng-view ng-controller="DayPilotCtrl">
+{{2+2}}
+<daypilot-calendar id="week" daypilot-config="weekConfig"></daypilot-calendar>
 
 <%= yield %>
-
+</div>
 </body>
 </html>

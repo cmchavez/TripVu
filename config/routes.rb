@@ -1,38 +1,24 @@
 Rails.application.routes.draw do
+  get 'static_pages/index'
+
   resources :users do  
     resources :trips
+<<<<<<< HEAD
   end
   get "/auth/:provider/callback" => "sessions#create"
   get 'sessions/show'
 get 'auth/logout' => 'sessions#destroy'
   resources :trips
   root 'users#index'
+=======
+>>>>>>> 514c6c01e5026ddc8feee49ec6516d322f55676d
   
-  # get 'trips/index' 
+end
+  root 'users#index'
 
-  # get 'trips/create'
 
-  # get 'trips/show'
+resources :trips
 
-  # get 'trips/edit'
-
-  # get 'trips/update'
-
-  # get 'trips/destroy'
-
-  # get 'users/index' => 'users#index'
-
-  # get 'users/new'
-
-  # get 'users/create'
-
-  # get 'users/show'
-
-  # get 'users/edit'
-
-  # get 'users/update'
-
-  # get 'users/destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -50,7 +36,7 @@ get 'auth/logout' => 'sessions#destroy'
   #   resources :products
 
   # Example resource route with options:
-  #   resources :products do
+  #   resources :products dok
   #     member do
   #       get 'short'
   #       post 'toggle'

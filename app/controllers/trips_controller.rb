@@ -17,7 +17,7 @@ class TripsController < ApplicationController
     @trip = Trip.new(trip_params)
    
     if @trip.save
-      redirect_to trips_path
+      redirect_to :return_to
 
     else 
       render :new

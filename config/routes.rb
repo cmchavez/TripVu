@@ -3,13 +3,12 @@ Rails.application.routes.draw do
 
   resources :users do  
     resources :trips
-  
-end
+  end
   root 'users#index'
 
 
   resources :trips
-  root to: 'application#angular'
+ 
 
 
   # The priority is based upon order of creation: first created -> highest priority.

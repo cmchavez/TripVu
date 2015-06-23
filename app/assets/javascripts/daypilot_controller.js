@@ -5,4 +5,10 @@ angular
 	      $scope.weekConfig = {
 	          viewType: "Week",
 	      };
-	    };
+	
+};
+	
+	// .controller('FormCtrl', FormCtrl);
+	// 	function FormCtrl($scope) {
+	// 		$scope.foo=bar 
+	// 	};   

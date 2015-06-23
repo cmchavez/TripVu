@@ -3,7 +3,7 @@
 
 <!-- <!DOCTYPE html> -->
 
-<html ng-app="dayPilotApp">
+<!-- <html ng-app="dayPilotApp">
 <head>
 	<title></title>
 </head>
@@ -38,19 +38,19 @@
 {{foo}}
 </body>
 </html>
+ -->
+
+<%= form_for @trip do |f| %>
 
 
-<%#= form_for @trip do |f| %>
-
-
-<!-- 	<div>
-	    <%#= f.label :location %>
-	    <%#= f.text_field :location %>
+	<div>
+	    <%= f.label :location %>
+	    <%= f.text_field :location %>
     </div>
- --><!-- <br>
-<br> -->
-<%#= link_to '<button type="button">Back</button>'.html_safe, users_path %>
+<br>
+<br> 
+<%= link_to '<button type="button">Back</button>'.html_safe, users_path %>
   	
-<%#= f.submit "Next: Pick Your Dates" %>
+<%= f.submit "Next: Pick Your Dates" %>
   
-<%# end %>
+<% end %> 

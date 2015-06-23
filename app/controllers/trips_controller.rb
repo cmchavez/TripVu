@@ -9,12 +9,12 @@ class TripsController < ApplicationController
   end
 
   def new
-    @trip = get_user.trips.build
+    @trip = Trip.new
 
   end
 
   def create
-    @trip = get_user.trips.create(trip_params)
+    @trip = Trip.new(trip_params)
    
     if @trip.save
       redirect_to trips_path
@@ -50,7 +50,4 @@ private
     params.require(:trip).permit(:location, :starting_time, :ending_time, :experiences, user_ids: [])
   end
 
-  def get_user
-    @user = User.find(params[:user_id])
-  end
 end

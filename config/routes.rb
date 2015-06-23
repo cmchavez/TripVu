@@ -2,30 +2,18 @@ Rails.application.routes.draw do
   get 'static_pages/index'
 
   resources :users do  
-<<<<<<< HEAD
-  resources :trips
-
+    resources :trips
   end
   get "/auth/:provider/callback" => "sessions#create"
   get 'sessions/show'
-get 'auth/logout' => 'sessions#destroy'
+  get 'auth/logout' => 'sessions#destroy'
   
-=======
-    resources :trips
-  end
->>>>>>> 4e1621287fb381d29fa73331984b356877f1e978
+
   root 'users#index'
 
   
 end
   
-
-
-<<<<<<< HEAD
-=======
-  resources :trips
- 
->>>>>>> 4e1621287fb381d29fa73331984b356877f1e978
 
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -9,10 +9,9 @@
 </head>
 <body>
 <%= params.inspect %>
-<div ng-view ng-controller="DayPilotCtrl">
-{{2+2}}
+<div ng-controller="DayPilotCtrl">
 <daypilot-calendar id="week" daypilot-config="weekConfig"></daypilot-calendar>
-
+{{foo}}
 <%= yield %>
 </div>
 </body>

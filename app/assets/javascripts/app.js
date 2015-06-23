@@ -1,9 +1,2 @@
-@dayPilotApp = angular.module('dayPilotApp', ['daypilot'])
+dayPilotApp = angular.module('dayPilotApp', ['daypilot', 'dayPilotApp.controllers']);
 
-@dayPilotApp.config(['$routeProvider', ($routeProvider) -&gt;
-  $routeProvider.
-    otherwise({
-      templateUrl: '../templates/home.html',
-      controller: 'DayPilotCtrl'
-    }) 
-])

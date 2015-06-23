@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html ng-app="dayPilotApp">
 <head>
@@ -22,12 +23,7 @@
 <%= yield %>
 
 <%= params.inspect %>
-<div ng-view ng-controller="DayPilotCtrl">
-{{2+2}}
-<daypilot-calendar id="week" daypilot-config="weekConfig"></daypilot-calendar>
-
 
 <%= yield %>
-</div>
 </body>
 </html>

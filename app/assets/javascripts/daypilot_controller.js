@@ -11,7 +11,7 @@ angular
 	      	  businessBeginsHour: 5,
 	      	  businessEndsHour: 20	
 
-	      }
+	      };
 	      $scope.foo = "bar";
 	    };
    // .controller('FormCtrl', FormCtrl);
@@ -20,9 +20,17 @@ angular
 	  //   	console.log("controller works")
    //  };   
 	
+
+	
+	// .controller('FormCtrl', FormCtrl);
+	// 	function FormCtrl($scope) {
+	// 		$scope.foo=bar 
+	// 	};   
+
 //     .config(function($routeProvider, $locationProvider) {$routeProvider
 // 	   .when('/templates/home', {
 // 	    templateUrl: '<%= asset_path("home.html.erb") %>',
 // 	    controller: 'DayPilotCtrl'
 // 	}
 // )})
+

@@ -2,22 +2,20 @@ Rails.application.routes.draw do
   get 'static_pages/index'
 
   resources :users do  
-    resources :trips
-<<<<<<< HEAD
+  resources :trips
+
   end
   get "/auth/:provider/callback" => "sessions#create"
   get 'sessions/show'
 get 'auth/logout' => 'sessions#destroy'
-  resources :trips
+  
   root 'users#index'
-=======
->>>>>>> 514c6c01e5026ddc8feee49ec6516d322f55676d
+
   
 end
-  root 'users#index'
+  
 
 
-resources :trips
 
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -74,4 +72,4 @@ resources :trips
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
+

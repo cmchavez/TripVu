@@ -4,11 +4,19 @@ Rails.application.routes.draw do
   resources :users do  
     resources :trips
   end
-  root 'users#index'
+  get "/auth/:provider/callback" => "sessions#create"
+  get 'sessions/show'
+  get 'auth/logout' => 'sessions#destroy'
+  
 
   resources :trips
  
- 
+
+  root 'users#index'
+
+  
+end
+  
 
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -65,4 +73,4 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
+

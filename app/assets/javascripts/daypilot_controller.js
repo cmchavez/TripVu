@@ -8,11 +8,12 @@ angular
 	      $scope.daysConfig = {
 	      	  viewType: "Days", 
 	      	  days: 3,
-	      	  businessBeginsHour: 5,
+	      	  businessBeginsHour: 8,
 	      	  businessEndsHour: 20	
 
 	      };
 	      $scope.foo = "bar";
+
 	    };
 
 	    
@@ -28,6 +29,9 @@ angular
 	// 	function FormCtrl($scope) {
 	// 		$scope.foo=bar 
 	// 	};   
+
+
+
 
 //     .config(function($routeProvider, $locationProvider) {$routeProvider
 // 	   .when('/templates/home', {

@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   end
   root 'users#index'
 
-
   resources :trips
+ 
  
 
 

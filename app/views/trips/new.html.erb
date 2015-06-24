@@ -41,7 +41,7 @@
  -->
 
 <%= form_for @trip do |f| %>
-
+ 
 
 	<div>
 	    <%= f.label :location %>
@@ -49,8 +49,11 @@
     </div>
 <br>
 <br> 
+
+	
 <%= link_to '<button type="button">Back</button>'.html_safe, users_path %>
   	
 <%= f.submit "Next: Pick Your Dates" %>
   
 <% end %> 
+

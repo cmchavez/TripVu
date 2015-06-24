@@ -7,6 +7,11 @@ class TripsController < ApplicationController
   def show
     @trip = Trip.find(params[:id])
 
+    params = { term: 'attractions',
+           limit: 20
+         }
+    @activities =  Yelp.client.search(@trip.location, params)
+
   end
 
   def new

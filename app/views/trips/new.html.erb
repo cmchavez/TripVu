@@ -1,27 +1,34 @@
 <h1>New Itinerary</h1>
-<%#= form_for @trip do |f| %>
 
 
-<!-- 	<div>
-	    <%#= f.label :location %>
-	    <%#= f.text_field :location %>
+<%= form_for @trip do |f| %>
+ 
+
+	<div>
+	    <%= f.label :location, "Destination:" %>
+	    <%= f.text_field :location %>
     </div>
- --><!-- <br>
-<br> -->
-<%#= link_to '<button type="button">Back</button>'.html_safe, users_path %>
-  	
-<%#= f.submit "Next: Pick Your Dates" %>
-  
-<%# end %>
-<!-- 
-<!DOCTYPE html>
-<html ng-app="dayPilotApp">
-<head>
-	<title></title>
-</head>
-<body ng-controller="FormCtrl">
-{{foo}}
-</body>
-</html> -->
+<br>
+<br> 
+	<div>
+	    <%= f.label :starting_time, "Departure Date:" %>
+	    <%= f.text_field :starting_time, type: "date"  %>
+    </div>
 
+<br>
+<br>
+
+<div>
+	    <%= f.label :ending_time, "Arrival Date:" %>
+	    <%= f.text_field :ending_time, type: "date"  %>
+    </div>
+
+<br>
+<br>
+	
+<%= link_to '<button type="button">Back</button>'.html_safe, users_path %>
+  	
+<%= f.submit "Next: Pick Your Activities" %>
+  
+<% end %> 
 

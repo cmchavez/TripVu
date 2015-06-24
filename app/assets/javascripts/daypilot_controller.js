@@ -13,7 +13,25 @@ angular
 
 	      };
 	      $scope.foo = "bar";
-		}; 
+
+	    };
+
+	    
+   // .controller('FormCtrl', FormCtrl);
+   //  	function FormCtrl($scope) {
+	  //       $scope.foo="bar"; 
+	  //   	console.log("controller works")
+   //  };   
+	
+
+	
+	// .controller('FormCtrl', FormCtrl);
+	// 	function FormCtrl($scope) {
+	// 		$scope.foo=bar 
+	// 	};   
+
+
+
 
 //     .config(function($routeProvider, $locationProvider) {$routeProvider
 // 	   .when('/templates/home', {

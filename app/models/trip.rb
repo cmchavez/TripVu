@@ -5,5 +5,4 @@ class Trip < ActiveRecord::Base
 	validates :location, presence: true
 	validates :starting_time, presence: true
 	validates :ending_time, presence: true
-	# validates :experiences, presence: true
 end

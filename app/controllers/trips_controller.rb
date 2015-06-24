@@ -6,7 +6,7 @@ class TripsController < ApplicationController
 
   def show
     @trip = Trip.find(params[:id])
-    
+
   end
 
   def new
@@ -19,12 +19,12 @@ class TripsController < ApplicationController
     @trip = Trip.new(trip_params)
    
     if @trip.save
-
-      redirect_to user_trip_path
-
+      
+      redirect_to trip_path(@trip.id)
 
     else 
-      render :new
+
+      render :index
     end 
   end
 

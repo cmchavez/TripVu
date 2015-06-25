@@ -16,6 +16,8 @@ RSpec.describe Trip, type: :model do
 		expect(trip).to be_invalid
 	end
 
-	
+	it "is invalid without without experiences" do 
+		trip = Trip.new(location: "Paris", starting_time: "6/23/15", ending_time: "6/25/15", experiences: nil)
+	end
 
 end

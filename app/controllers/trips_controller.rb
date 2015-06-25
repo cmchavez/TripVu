@@ -6,11 +6,19 @@ class TripsController < ApplicationController
 
   def show
     @trip = Trip.find(params[:id])
-
+    @bus = []
     params = { term: 'attractions',
-           limit: 20
+           limit: 8
          }
     @activities =  Yelp.client.search(@trip.location, params)
+    @activities.businesses.each do |busi|
+      # data = {
+      #   name: busi.name,
+      #   rating: busi.rating
+      # }
+
+      @bus.push(busi.name)
+    end
 
   end
 

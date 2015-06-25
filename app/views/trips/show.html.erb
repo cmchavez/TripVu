@@ -1,14 +1,11 @@
 <h1>Trip Show</h1>
+<%=@bus%>
 
-
-<%= @activities.businesses[1].name %>
-<div ng-app= "dayPilotApp" ng-controller="DayPilotCtrl" ng-init="init('<%=@activities.businesses%>')">
+<div ng-app= "dayPilotApp" ng-controller="DayPilotCtrl" ng-init="init('<%=@bus%>')">
 	<div class="col-md-4">
 		<ul>
-		<!-- <li ng-repeat="business in businesses"> {{business}}</li> -->
+		<li ng-repeat="business in businesses track by $index"> {{business}}</li>
 		</ul>
-		<!-- <div class="col-md-4" id="test1" ng-repeat="business in @activities.businesses">{{business.name}}</div>
- -->
 	</div>
 	<div class="col-md-8">
 		<daypilot-calendar id="week" daypilot-config="daysConfig"></daypilot-calendar>

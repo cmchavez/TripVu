@@ -14,8 +14,8 @@ angular
 	      };
 	      $scope.init = function(busiArray)
 			  {
-			    $scope.businesses = busiArray
-			    
+			    $scope.businesses = busiArray;
+
 			    };
 			  
 				      $scope.foo = "bar";

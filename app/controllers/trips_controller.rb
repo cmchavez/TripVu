@@ -8,18 +8,16 @@ class TripsController < ApplicationController
     @trip = Trip.find(params[:id])
     @bus = []
     params = { term: 'attractions',
-           limit: 8
+           limit: 20,
+           sort: 0
          }
     @activities =  Yelp.client.search(@trip.location, params)
+
     @activities.businesses.each do |busi|
-      # data = {
-      #   name: busi.name,
-      #   rating: busi.rating
-      # }
-
-      @bus.push(busi.name)
-    end
-
+      data = [busi.name, busi.rating_img_url_small, busi.image_url, busi.url, busi.id]
+      @bus.push(data)
+     end
+    @dates = [@trip.starting_time, @trip.ending_time] 
   end
 
   def new

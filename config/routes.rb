@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :trips
  
 
-  root 'users#index'
+  root 'static_pages#index'
 
   
 end

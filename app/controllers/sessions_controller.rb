@@ -3,15 +3,18 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @auth = request.env['omniauth.auth']
-    session['auth'] = @auth
-    redirect_to sessions_show_path
+    
+    @user = User.from_omniauth(request.env['omniauth.auth'])
+    session[:user_id] = @user.id
+    flash[:success] = "Welcome, #{@user.name}!"
+  
+    redirect_to root_path
 end
 
 
   def show
-    redirect_to root_path unless session['auth']
-    @auth = session['auth'] 
+    redirect_to root_path unless session[:user_id]
+    @auth = session[:user_id] 
     
     redirect_to users_path
 
@@ -19,7 +22,7 @@ end
 
 
 def destroy
-    session['auth'] = nil
+    session[:user_id] = nil
     redirect_to root_path
 end
 end

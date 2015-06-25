@@ -12,7 +12,13 @@ angular
 	      	  businessEndsHour: 20	
 
 	      };
-	      $scope.foo = "bar";
+	      $scope.init = function(busiArray)
+			  {
+			    $scope.businesses = busiArray
+			    
+			    };
+			  
+				      $scope.foo = "bar";
 
 	    };
 

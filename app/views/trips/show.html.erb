@@ -1,14 +1,11 @@
 <h1>Trip Show</h1>
 
 
-
-<div ng-app= "dayPilotApp" ng-controller="DayPilotCtrl">
+<%= @activities.businesses[1].name %>
+<div ng-app= "dayPilotApp" ng-controller="DayPilotCtrl" ng-init="init('<%=@activities.businesses%>')">
 	<div class="col-md-4">
 		<ul>
-		<% @activities.businesses.each do |busi| %>
-		
-		<li><%= busi.name %></li>
-		<% end %>
+		<!-- <li ng-repeat="business in businesses"> {{business}}</li> -->
 		</ul>
 		<!-- <div class="col-md-4" id="test1" ng-repeat="business in @activities.businesses">{{business.name}}</div>
  -->

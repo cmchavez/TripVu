@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.1.5'
+
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'sass-rails', '>= 3.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -37,6 +39,7 @@ gem "angular-dragdrop-rails"
 # gem 'capistrano-rails', group: :development
 gem 'yelp', require: 'yelp'
 
+
 group :development, :test do
 
 	gem 'rspec-rails', '~> 3.2.1'
@@ -49,5 +52,12 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   	gem 'spring'
+
 end
+
+group :production do
+  gem 'rails_12factor'
+  
+end
+
 

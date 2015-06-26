@@ -34,20 +34,16 @@ angular
 		  		console.log([$scope.d1,$scope.d2,$scope.mo1,$scope.mo2,$scope.day1,$scope.day2])
 
 		  		if ($scope.mo1 === $scope.mo2	){
-		  			if ($scope.day2 - $scope.day1 < 7){
-		  				alert("hi, it's the same month and we're less than 7");
+		  			if ($scope.day2 - $scope.day1 < 9){
 		  				return $scope.day2 - $scope.day1 +1
-		  			} else { 
-		  				alert("it's the same month and we're greater than 7"); 
-		  			return 7
+		  			} else {  
+		  			return 9
 		  			}
 		  		}else {
-		  			if (($scope.day2 - $scope.day1 + 30) < 7){
-		  				alert("different month, less than 7")
+		  			if (($scope.day2 - $scope.day1 + 30) < 9){
 		  				return $scope.day2 - $scope.day1 +31
 		  			} else { 
-		  				alert("different month, greater than 7")
-		  				return 7 
+		  				return 9 
 		  			}
 		  		}
 		  	}

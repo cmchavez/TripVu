@@ -5,3 +5,4 @@
  
 <%= link_to '<button type="button">Back</button>'.html_safe, users_path  %>
 <%= link_to '<button type="button">Create a New Itinerary</button>'.html_safe, new_user_trip_path(@user, @trip) %>
+<%= link_to '<button type="button">My Trips</button>'.html_safe, user_trips_path(@user, @trip)%>

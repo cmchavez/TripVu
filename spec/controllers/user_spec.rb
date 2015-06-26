@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe UsersController do 
-	
+
 	describe "new action in user controller" do
 		it "creates a user with a name" do
       	user1 = User.new(first: "john", last: "ward", email: "john@john.com", home:"Santa Monica", age: 27)
@@ -17,7 +17,7 @@ RSpec.describe UsersController do
 			expect(subject).to render_template("users/index")
 		end
 
-		it 
+		
 	end
 
 		

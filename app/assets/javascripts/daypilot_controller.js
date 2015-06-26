@@ -33,14 +33,22 @@ angular
 		  		$scope.day2 = parseInt($scope.d2[8]+$scope.d2[9])
 		  		console.log([$scope.d1,$scope.d2,$scope.mo1,$scope.mo2,$scope.day1,$scope.day2])
 
-		  		if ($scope.mo1[6] === $scope.mo2[6]){
+		  		if ($scope.mo1 === $scope.mo2	){
 		  			if ($scope.day2 - $scope.day1 < 7){
+		  				alert("hi, it's the same month and we're less than 7");
 		  				return $scope.day2 - $scope.day1 +1
-		  			} else {return 7}	
-		  		} else {
+		  			} else { 
+		  				alert("it's the same month and we're greater than 7"); 
+		  			return 7
+		  			}
+		  		}else {
 		  			if (($scope.day2 - $scope.day1 + 30) < 7){
+		  				alert("different month, less than 7")
 		  				return $scope.day2 - $scope.day1 +31
-		  			} else {return 7}
+		  			} else { 
+		  				alert("different month, greater than 7")
+		  				return 7 
+		  			}
 		  		}
 		  	}
 

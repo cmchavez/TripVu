@@ -40,6 +40,8 @@ gem 'ngannotate-rails'
 # gem 'capistrano-rails', group: :development
 gem 'yelp', require: 'yelp'
 
+gem 'ngannotate-rails'
+
 
 group :development, :test do
 

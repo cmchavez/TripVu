@@ -3,11 +3,11 @@ class SessionsController < ApplicationController
   end
 
   def create
-    
-    @user = User.from_omniauth(request.env['omniauth.auth'])
+    @authhash = request.env['omniauth.auth']
+    @user = User.from_omniauth(@authhash)
     session[:user_id] = @user.id
     flash[:success] = "Welcome, #{@user.name}!"
-  
+  Rails.logger.debug(@authhash)
     redirect_to root_path
 end
 

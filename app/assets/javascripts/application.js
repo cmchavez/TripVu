@@ -10,10 +10,12 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
 //= require jquery
-//= require bootstrap-sprockets
 //= require jquery_ujs
 //= require angular
+//= require angular-dragdrop
 //= require app
 //= require daypilot-all.min
+//= require bootstrap-sprockets
 //= require_tree .

@@ -4,7 +4,7 @@
 <div ng-app= "dayPilotApp" ng-controller="DayPilotCtrl" ng-init="init(<%=@bus%>)">
 	
 	<div class="col-md-4 tiles" >
-		<div class="col-md-4 tile" ng-repeat="business in businesses track by $index"> <a ng-href="{{business[3]}}"> {{business[0]}} </a><br /> <img ng-src="{{business[1]}}"> <br /> 
+		<div class="col-md-4 tile" ng-repeat="business in businesses track by $index"> <a ng-href="{{business[3]}}" ng-bind=business[0]> </a><br /> <img ng-src="{{business[1]}}"> <br /> 
 		<img ng-src="{{business[2]}}">
 		</div>
 	</div>
@@ -13,5 +13,5 @@
 		<daypilot-calendar id="week" daypilot-config="daysConfig"></daypilot-calendar>
 	
 	</div>
-	{{foo}}
+	
 </div>

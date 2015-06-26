@@ -1,8 +1,14 @@
 
-<h1><%= @user.name  %>
+<h1>Welcome <%= @user.name %>!</h1>
 <h4>Email Address: <%= @user.email  %></h4>
 <h4>Location: <%= @user.home  %></h4>
+<ul>
+<% @user.trips.each do |trip| %>
+	<li><%= trip.location %> <%= trip.id %>  </li>
+<% end %>
+</ul>
 <br>
  
 <%= link_to '<button type="button">Back</button>'.html_safe, users_path  %>
 <%= link_to '<button type="button">Create a New Itinerary</button>'.html_safe, new_user_trip_path(@user, @trip) %>
+<%= link_to '<button type="button">My Trips</button>'.html_safe, user_trips_path(@user, @trip)%>

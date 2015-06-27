@@ -41,20 +41,16 @@ ActiveRecord::Schema.define(version: 20150625221717) do
     t.string   "email"
     t.string   "home"
     t.integer  "age"
-    t.string   "provider",   null: false
-    t.string   "uid",        null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"
+    t.string   "uid"
+    t.string   "provider"
     t.string   "name"
     t.string   "location"
     t.string   "image_url"
     t.string   "url"
   end
-
-  add_index "users", ["provider", "uid"], name: "index_users_on_provider_and_uid", unique: true, using: :btree
-  add_index "users", ["provider"], name: "index_users_on_provider", using: :btree
-  add_index "users", ["uid"], name: "index_users_on_uid", using: :btree
 
   add_foreign_key "tripusers", "trips"
   add_foreign_key "tripusers", "users"

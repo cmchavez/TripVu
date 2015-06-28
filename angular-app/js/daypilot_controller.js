@@ -41,7 +41,8 @@ angular
                                 oauth_signature_method: "HMAC-SHA1",
                                 oauth_token: 'UXqJ2CyAaKQD_mzqH8mMp7Y7-lIrWhqt', //Token
                                 oauth_timestamp: new Date().getTime(),
-                                term: 'food'           
+                                term: 'attractions',
+                                limit: 20           
                             };
                         var consumerSecret = '5h_r39wNZo5GMcEGIKbaZ18busA'; 
                         var tokenSecret = 'oKSqk3Kpc3QMdPsLtHMZnzRqH-0'; //Token Secret

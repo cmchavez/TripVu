@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="dayPilotApp">
+    <head>
+        <meta charset="utf-8">
+
+        <title>My tripVu Itinerary</title>
+
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,800' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+        <script src="js/angular.js"></script>
+        <script src="js/app.js" defer></script>
+        <script src="js/daypilot-all.min.js"></script>
+        <script src="js/oauth-signature.js"></script>
+       <!-- 	// <script src="js/attrFactory.js"></script> -->
+        <script src="js/daypilot_controller.js" defer></script>
+        <script src="../node_modules/angular-resource/angular-resource.js"></script>
+        
+    </head>
+<body ng-controller="DayPilotCtrl">
+	<h1>My Itinerary</h1>
+	{{bowties}}
+	<div class="col-md-4">
+	<div class="col-md-4 tile" ng-repeat="business in businesses">
+	 <a ng-href="{{business.url}}" ng-bind=business.name> </a><br /> <img ng-src="{{business.rating_img_url_small}}"> <br /> 
+		<img ng-src="{{business.image_url}}">
+	 </div>
+
+	</div>
+	<div class="col-md-8">
+		<daypilot-calendar id="week" daypilot-config="daysConfig"></daypilot-calendar>
+	</div>
+</body>
+</html>

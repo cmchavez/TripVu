@@ -14,17 +14,14 @@ angular
                 });
 	  
 	  
-	  $http.get('https://rails-api-bowtie.herokuapp.com/api/bowties/', { cache: true })
+	  $http.get('https://tripvu.herokuapp.com/api/trips/', { cache: true })
 	  .then(function(response){
-	  	$scope.bowties = response.data
+	  	$scope.trips = response.data
 	  })
-	  	
+	  	console.log($scope.trips)
 
 
- $http.get("http://rails-api-bowtie.herokuapp.com/api/bowties", { cache: true })
- .then(function(response){
-   $scope.bowties = response.data
- });
+ 
 
 
 

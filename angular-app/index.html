@@ -20,7 +20,7 @@
     </head>
 <body ng-controller="DayPilotCtrl">
 	<h1>My Itinerary</h1>
-	{{bowties}}
+	{{trips}}
 	<div class="col-md-4">
 	<div class="col-md-4 tile" ng-repeat="business in businesses">
 	 <a ng-href="{{business.url}}" ng-bind=business.name> </a><br /> <img ng-src="{{business.rating_img_url_small}}"> <br /> 

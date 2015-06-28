@@ -1,4 +1,4 @@
-# PostgreSQL. Versions 8.2 and up are supported.
+  # PostgreSQL. Versions 8.2 and up are supported.
 #
 # Install the pg driver:
 #   gem install pg
@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: tripVu_production
-  username: tripVu
-  password: <%= ENV['TRIPVU_DATABASE_PASSWORD'] %>
+  username: rails
+  password: <%= ENV['APP_DATABASE_PASSWORD'] %>

@@ -1,7 +1,7 @@
 class TripsController < ApplicationController
   protect_from_forgery with: :null_session
   def index
-    @trips = Trip.all
+    # @trips = Trip.all
   end
 
   def show

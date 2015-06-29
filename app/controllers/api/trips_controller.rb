@@ -16,13 +16,13 @@ module API
 		end
 		def update
 	      trip = Trip.find(params[:id])
-	      if trip.update(bowtie_params)
+	      if trip.update(trip_params)
 	        head 204
 	      end
 	    end
 
     private
-	  def bowtie_params
+	  def trip_params
 	    params.require(:trip).permit(:location, :starting_time, :ending_time, :experiences, user_ids: [])
 	  end
 

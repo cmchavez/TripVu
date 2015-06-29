@@ -22,11 +22,19 @@
     </head>
 <body ng-controller="DayPilotCtrl">
 	<h1>My Itinerary</h1>
-	{{trip.experiences }}
+	{{calExp}}
+	<div ng-repeat="exp in trip.experiences">
+		{{exp.name}}
+
+	</div>
 	<form ng-submit="loadApis(tripid)">
-  		Enter text and hit enter:
+  		Enter your TripId:
 	<input type="text" ng-model="tripid" name="text" />
 	<input type="submit" id="submit" value="Submit" /> 
+	<button ng-click="updateExp()">Save Trip</button>
+	<button ng-click="addToCal()">Add to Calendar</button>
+	
+
 </form>
 
 	<!--<label for="startInput">When will you get there? </label>
@@ -43,7 +51,7 @@
 
 		</div>
 		<div class="col-md-8">
-			<daypilot-calendar id="week" daypilot-config="daysConfig" ng-model="trip.experiences" jqyoui-droppable data-drop="true">></daypilot-calendar>
+			<daypilot-calendar id="week" daypilot-config="daysConfig" daypilot-events="calExp" ng-model="trip.experiences" jqyoui-droppable data-drop="true">></daypilot-calendar>
 		</div>
 	</div>
 </body>

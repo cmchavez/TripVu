@@ -7,16 +7,20 @@ angular
       $scope.daysConfig = {}
       $scope.tripid=null
       $scope.apiCheck=null
+      $scope.calExp=[]
+
     
 	  
 	  $scope.loadApis =function(tripid){
 		  $http.get('https://tripvu.herokuapp.com/api/trips/', { cache: true })
 		  .then(function(response){
 		  	$scope.trips = response.data
+		  	$scope.tripid = tripid
 		  	init($scope.trips,tripid)
 		  	
 		  });
 		  $scope.apiCheck = true;
+
 
 		  function init(trips,ind){
 		  	$scope.trip = {
@@ -40,12 +44,28 @@ angular
 	      	  businessEndsHour: 20,
 	      	  startDate: $scope.trip.starting_time
 	      };
+	      
+	      $scope.dpStart =  DayPilot.Date($scope.trip.starting_time + "T09:00:00")
+	      $scope.dpEnd = DayPilot.Date($scope.trip.starting_time + "T13:00:00")
+	      console.log($scope.dpEnd)
 	  	}
 	  }
+	$scope.addToCal = function(){
+		for(var i=0; i<$scope.trip.experiences; i++)
+			var data = {
+				id: i,
+				text: $scope.trip.experiences[i],
+				start: $scope.dpStart,
+				end: $scope.dpEnd
+			}
+			var newExp = new DayPilot.Event(data);
+			$scope.calExp.push(newExp)
+		}
 	
-	$scope.addExp = function($index){
-		var exp = $scope.businesses[$index].id;
-  		$http.post("http://tripvu.herokuapp.com/api/trips", {id: exp})
+	$scope.updateExp = function(){
+		url = "https://tripvu.herokuapp.com/api/trips/" + $scope.tripid
+		console.log(url)
+  		$http.post(url, {experiences: $scope.trip.experiences})
 		    .success(function(result) {
 		      console.log(result);
 		    })

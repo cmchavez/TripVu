@@ -1,6 +1,3 @@
-dayPilotApp = angular.module('dayPilotApp', ['daypilot', 'dayPilotApp.controllers', 'ngDragDrop']);
+dayPilotApp = angular.module('dayPilotApp', ['daypilot', 'dayPilotApp.controllers']);
 
-// $(function() {
-//     $( "#draggable" ).draggable();
-//     });
 

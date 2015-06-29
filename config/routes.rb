@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'static_pages/index'
 
   namespace :api do
-    resources :trips, only: [:index]
+    resources :trips, only: [:index, :show, :create, :update]
   end
 
   resources :users do  

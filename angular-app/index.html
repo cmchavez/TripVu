@@ -8,28 +8,44 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,800' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
         <script src="js/angular.js"></script>
         <script src="js/app.js" defer></script>
-        <script src="js/daypilot-all.min.js"></script>
+        <script src="js/daypilot-all.min.js" defer></script>
         <script src="js/oauth-signature.js"></script>
        <!-- 	// <script src="js/attrFactory.js"></script> -->
         <script src="js/daypilot_controller.js" defer></script>
+        <script src="js/angular-dragdrop.js"></script>
         <script src="../node_modules/angular-resource/angular-resource.js"></script>
         
     </head>
 <body ng-controller="DayPilotCtrl">
 	<h1>My Itinerary</h1>
-	{{trips}}
-	<div class="col-md-4">
-	<div class="col-md-4 tile" ng-repeat="business in businesses">
-	 <a ng-href="{{business.url}}" ng-bind=business.name> </a><br /> <img ng-src="{{business.rating_img_url_small}}"> <br /> 
-		<img ng-src="{{business.image_url}}">
-	 </div>
+	{{trip.experiences }}
+	<form ng-submit="loadApis(tripid)">
+  		Enter text and hit enter:
+	<input type="text" ng-model="tripid" name="text" />
+	<input type="submit" id="submit" value="Submit" /> 
+</form>
 
-	</div>
-	<div class="col-md-8">
-		<daypilot-calendar id="week" daypilot-config="daysConfig"></daypilot-calendar>
+	<!--<label for="startInput">When will you get there? </label>
+	 <input type="date" id="startInput" ng-model="trip.starting_time" placeholder="yyyy-MM-dd" min="2015-01-01" ><br>
+
+	<label for="endInput">When will you leave? </label>
+	 <input type="date" id="endInput" ng-model="trip.ending_time" placeholder="yyyy-MM-dd" min="2015-01-01" ><br> -->
+	<div ng-show="apiCheck">
+		<div class="col-md-4">
+			<div class="col-md-4 tile" ng-repeat="business in businesses" data-drag="true" ng-model="businesses" jqyoui-draggable="{index: {{$index}},animate:true}" ng-click="addExp($index)">
+			 <a ng-href="{{business.url}}" ng-bind=business.name> </a><br /> <img ng-src="{{business.rating_img_url_small}}"> <br /> 
+				<img ng-src="{{business.image_url}}">
+			 </div>
+
+		</div>
+		<div class="col-md-8">
+			<daypilot-calendar id="week" daypilot-config="daysConfig" ng-model="trip.experiences" jqyoui-droppable data-drop="true">></daypilot-calendar>
+		</div>
 	</div>
 </body>
 </html>
+

@@ -40,7 +40,7 @@ gem "angular-dragdrop-rails"
 # gem 'capistrano-rails', group: :development
 gem 'yelp', require: 'yelp'
 
-gem 'ngannotate-rails'
+gem 'rack-cors', :require => 'rack/cors'
 
 
 group :development, :test do

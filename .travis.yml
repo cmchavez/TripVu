@@ -1,0 +1,10 @@
+language: ruby
+rvm:
+  # - 2.2.2
+  - 2.1.5
+cache: bundler
+script: bundle exec rspec
+addons:
+  postgresql: "9.3"
+before_script:
+  - psql -c 'create database tripvu_test;' -U postgres

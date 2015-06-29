@@ -22,20 +22,17 @@
     </head>
 <body ng-controller="DayPilotCtrl">
 	<h1>My Itinerary</h1>
-	{{calExp}}
 	<div ng-repeat="exp in trip.experiences">
 		{{exp.name}}
-
 	</div>
 	<form ng-submit="loadApis(tripid)">
   		Enter your TripId:
 	<input type="text" ng-model="tripid" name="text" />
 	<input type="submit" id="submit" value="Submit" /> 
+	</form>
 	<button ng-click="updateExp()">Save Trip</button>
-	<button ng-click="addToCal()">Add to Calendar</button>
+	<!-- <button ng-click="addToCal()">Add to Calendar</button> -->
 	
-
-</form>
 
 	<!--<label for="startInput">When will you get there? </label>
 	 <input type="date" id="startInput" ng-model="trip.starting_time" placeholder="yyyy-MM-dd" min="2015-01-01" ><br>

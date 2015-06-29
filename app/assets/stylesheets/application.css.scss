@@ -2,16 +2,18 @@
 @import "bootstrap";
 
 .tile {
-	background: beige;
+	background: #D4E1E1;
 	height: 220px;
-	border: 5px solid black;
+	border: 5px solid #BFCACA;
+	border-radius: 25px;
 	display: inline-block;
-}
 
+}
 
 .title {
 	display: inline;
 }
+
 #yelplogo {
 	padding: 0px 0px 10px 0px;
 }
@@ -20,16 +22,16 @@ h2 {
 	text-align: center;
 	font-family: "Courier New", Courier, monospace;
 	font-size: 100px;
-    
 }
 
 
 #logo {
-
 	margin-left: 19.4%;
 	img {
     opacity: 0.4;
     filter: alpha(opacity=40);
     }
   }
+
+
     

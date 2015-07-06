@@ -39,6 +39,7 @@
 
 	<label for="endInput">When will you leave? </label>
 	 <input type="date" id="endInput" ng-model="trip.ending_time" placeholder="yyyy-MM-dd" min="2015-01-01" ><br> -->
+	
 	<div ng-show="apiCheck">
 		<div class="col-md-4">
 			<div class="col-md-4 tile" ng-repeat="business in businesses" data-drag="true" ng-model="businesses" jqyoui-draggable="{index: {{$index}},animate:true}" ng-click="addExp($index)">
